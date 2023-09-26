@@ -1,5 +1,16 @@
-import styles from './page.module.scss';
+import { Metadata } from 'next';
+import Main from '@/components/Main/Main';
+
+export const metadata: Metadata = {
+  title: 'Colorz Vizualization',
+  description:
+    'Colorz Vizialization gives you a preview of the colors you want to use in your portfolio.',
+};
 
 export default function Home() {
-  return <main className={styles.main}>Colorz vizualization</main>;
+  return (
+    <>
+      <Main />
+    </>
+  );
 }

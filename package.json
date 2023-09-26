@@ -11,8 +11,10 @@
   "dependencies": {
     "next": "latest",
     "react": "latest",
+    "react-colorful": "^5.6.1",
     "react-dom": "latest",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
     "@types/node": "latest",
