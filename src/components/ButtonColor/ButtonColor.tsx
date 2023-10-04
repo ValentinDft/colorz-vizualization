@@ -1,27 +1,48 @@
 import { useColorStore } from '@/utils/store';
-import styles from './ButtonColor.module.scss';
+import styles from './button-color.module.scss';
 import ColorPicker from '../ColorPicker/ColorPicker';
 
 type propsButtonColor = {
   color: string;
+  id: string;
 };
 
-const ButtonColor = ({ color }: propsButtonColor) => {
-  const { changeOpenColorPicker, openColorPicker } = useColorStore();
+const ButtonColor = ({ color, id }: propsButtonColor) => {
+  const {
+    changeOpenColorPicker,
+    openColorPicker,
+    selectedPicker,
+    closeColorPicker,
+    textColor,
+  } = useColorStore();
+
+  const displayPicker = () => {
+    if (openColorPicker && selectedPicker === id) {
+      return (
+        <div className={styles['container-color-picker']}>
+          <ColorPicker id={id} />
+        </div>
+      );
+    }
+  };
+
+  const clickButton = (id: string) => {
+    changeOpenColorPicker(id);
+    if (openColorPicker && selectedPicker === id) {
+      closeColorPicker(id);
+    }
+  };
+
   return (
     <>
-      {openColorPicker && (
-        <div className={styles['container-color-picker']}>
-          <ColorPicker />
-        </div>
-      )}
+      {displayPicker()}
 
       <button
         className={styles['button']}
-        style={{ backgroundColor: color }}
-        onClick={() => changeOpenColorPicker()}
+        style={{ backgroundColor: color, color: textColor }}
+        onClick={() => clickButton(id)}
       >
-        Background
+        {id}
       </button>
     </>
   );

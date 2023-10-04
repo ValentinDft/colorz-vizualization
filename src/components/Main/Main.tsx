@@ -3,11 +3,11 @@ import { useColorStore } from '@/utils/store';
 import BottomBar from '../BottomBar/BottomBar';
 
 const Main = () => {
-  const { backgroundColor } = useColorStore();
+  const { backgroundColor, textColor } = useColorStore();
 
   return (
     <main style={{ backgroundColor: backgroundColor, height: '100vh' }}>
-      Colorz vizualization
+      <h1 style={{ color: textColor }}>Colorz vizualization</h1>
       <BottomBar />
     </main>
   );

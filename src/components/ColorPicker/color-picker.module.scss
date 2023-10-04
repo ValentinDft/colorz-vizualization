@@ -1,0 +1,24 @@
+.card {
+  background-color: white;
+  width: 200px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  input {
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 180px;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
