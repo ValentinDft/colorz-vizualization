@@ -8,14 +8,26 @@ type propsColorPicker = {
 };
 
 const ColorPicker = ({ id }: propsColorPicker) => {
-  const { backgroundColor, textColor, changeBackgroundColor, changeTextColor } =
-    useColorStore();
+  const {
+    backgroundColor,
+    textColor,
+    changeBackgroundColor,
+    changeTextColor,
+    primaryColor,
+    secondaryColor,
+    changePrimaryColor,
+    changeSecondaryColor,
+  } = useColorStore();
   let color: string;
 
   if (id === 'Background') {
     color = backgroundColor;
   } else if (id === 'Text') {
     color = textColor;
+  } else if (id === 'Primary') {
+    color = primaryColor;
+  } else if (id === 'Secondary') {
+    color = secondaryColor;
   }
 
   const setColor = (color: string) => {
@@ -23,6 +35,10 @@ const ColorPicker = ({ id }: propsColorPicker) => {
       changeBackgroundColor(color);
     } else if (id === 'Text') {
       changeTextColor(color);
+    } else if (id === 'Primary') {
+      changePrimaryColor(color);
+    } else if (id === 'Secondary') {
+      changeSecondaryColor(color);
     }
   };
 

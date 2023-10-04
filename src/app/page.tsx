@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Main from '@/components/Main/Main';
+import Main from '@/app/_components/Main/Main';
 
 export const metadata: Metadata = {
   title: 'Colorz Vizualization',

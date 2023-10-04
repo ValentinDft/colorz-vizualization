@@ -1,6 +1,7 @@
 import { useColorStore } from '@/utils/store';
 import styles from './button-color.module.scss';
 import ColorPicker from '../ColorPicker/ColorPicker';
+import { calculateTextColor } from '@/utils/calculateTextColor';
 
 type propsButtonColor = {
   color: string;
@@ -13,8 +14,8 @@ const ButtonColor = ({ color, id }: propsButtonColor) => {
     openColorPicker,
     selectedPicker,
     closeColorPicker,
-    textColor,
   } = useColorStore();
+  const textColor = calculateTextColor(color);
 
   const displayPicker = () => {
     if (openColorPicker && selectedPicker === id) {
