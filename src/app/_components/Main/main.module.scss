@@ -1,4 +1,9 @@
-.container-actions {
-  display: flex;
-  gap: 20px;
+.container {
+  padding: 15% 10%;
+  height: calc(100vh - 10px);
+  &-actions {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+  }
 }

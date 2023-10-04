@@ -9,8 +9,17 @@ const Main = () => {
     useColorStore();
 
   return (
-    <main style={{ backgroundColor: backgroundColor, height: '100vh' }}>
-      <h1 style={{ color: textColor }}>Colorz vizualization</h1>
+    <main
+      style={{ backgroundColor: backgroundColor }}
+      className={styles['container']}
+    >
+      <h1 style={{ color: textColor }}>
+        Colorz <span style={{ color: primaryColor }}>vizualization</span>
+      </h1>
+      <p style={{ color: textColor }}>
+        You can change the <span style={{ color: secondaryColor }}>color</span>{' '}
+        of any element, to simulate a color palette for your website.
+      </p>
       <div className={styles['container-actions']}>
         <Button backgroundColor={primaryColor} text='Get Started' />
         <Button backgroundColor={secondaryColor} text='Pricing' />
