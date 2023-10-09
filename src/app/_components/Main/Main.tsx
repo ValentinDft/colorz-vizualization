@@ -3,11 +3,13 @@ import { useColorStore } from '@/utils/store';
 import BottomBar from '../../../components/BottomBar/BottomBar';
 import Button from '@/components/Button/Button';
 import styles from './main.module.scss';
+import { useWindowSize } from '@/utils/useWindowSize';
+import OverlayMobile from '@/components/OverlayMobile/OverlayMobile';
 
 const Main = () => {
   const { backgroundColor, textColor, primaryColor, secondaryColor } =
     useColorStore();
-
+  const onMobileDevice = useWindowSize(768);
   return (
     <main
       style={{ backgroundColor: backgroundColor }}
@@ -24,6 +26,7 @@ const Main = () => {
       </div>
 
       <BottomBar />
+      {onMobileDevice && <OverlayMobile />}
     </main>
   );
 };
