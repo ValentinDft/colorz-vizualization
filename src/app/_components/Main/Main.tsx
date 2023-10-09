@@ -13,9 +13,7 @@ const Main = () => {
       style={{ backgroundColor: backgroundColor }}
       className={styles['container']}
     >
-      <h1 style={{ color: textColor }}>
-        Colorz <span style={{ color: primaryColor }}>vizualization</span>
-      </h1>
+      <h1>Visualize Your Colors</h1>
       <p style={{ color: textColor }}>
         You can change the <span style={{ color: secondaryColor }}>color</span>{' '}
         of any element, to simulate a color palette for your website.
