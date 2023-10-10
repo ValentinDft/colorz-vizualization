@@ -2,6 +2,7 @@
 import { useColorStore } from '@/utils/store';
 import { HexColorInput, HexColorPicker } from 'react-colorful';
 import styles from './color-picker.module.scss';
+import { XCircle } from 'react-feather';
 
 type propsColorPicker = {
   id: string;
@@ -17,6 +18,7 @@ const ColorPicker = ({ id }: propsColorPicker) => {
     secondaryColor,
     changePrimaryColor,
     changeSecondaryColor,
+    closeColorPicker,
   } = useColorStore();
   let color: string;
 
@@ -44,7 +46,13 @@ const ColorPicker = ({ id }: propsColorPicker) => {
 
   return (
     <div className={styles['card']}>
-      <span>{id} color</span>
+      <div style={{ marginBottom: '15px' }}>
+        <span>{id} color</span>
+        <span className={styles['close']} onClick={() => closeColorPicker(id)}>
+          <XCircle />
+        </span>
+      </div>
+
       <HexColorPicker color={color} onChange={(color) => setColor(color)} />
       <HexColorInput color={color} onChange={(color) => setColor(color)} />
     </div>
