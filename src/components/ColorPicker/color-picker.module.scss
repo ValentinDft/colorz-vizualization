@@ -10,7 +10,6 @@
   align-items: center;
 
   span {
-    margin-bottom: 20px;
     text-transform: uppercase;
   }
 
@@ -20,5 +19,16 @@
     width: 180px;
     font-size: 14px;
     padding: 5px 10px;
+  }
+
+  .text {
+    padding-bottom: 40px !important;
+  }
+
+  .close {
+    position: absolute;
+    left: 210px;
+    top: 5px;
+    cursor: pointer;
   }
 }
