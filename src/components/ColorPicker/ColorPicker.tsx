@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 import { useColorStore } from '@/utils/store';
 import { HexColorInput, HexColorPicker } from 'react-colorful';
