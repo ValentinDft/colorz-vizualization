@@ -4,7 +4,7 @@ const OverlayMobile = () => {
   return (
     <div className={styles['overlay-mobile']}>
       <div className={styles['card']}>
-        <h2>Your device is too small to display our app properly !</h2>
+        <h2>The mobile version is in comming !</h2>
       </div>
     </div>
   );

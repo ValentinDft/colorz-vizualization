@@ -1,8 +1,7 @@
 import { useColorStore } from '@/utils/store';
 
 const ImageIllustration = () => {
-  const { backgroundColor, textColor, primaryColor, secondaryColor } =
-    useColorStore();
+  const { textColor, primaryColor, secondaryColor } = useColorStore();
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
